@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/carrito.css" />
+  </head>
+
+  <body>
+    <%- include('./header2')%>
+
+    <main class="container">
+      <h1 class="pagina">CARRITO DE COMPRAS</h1>
+
+      <section class="subtitulo">
+        <p>DETALLE DEL PRODUCTO</p>
+        <p>CANTIDAD</p>
+        <p>TOTAL</p>
+      </section>
+      <section class="cart-carrito-1">
+        <div class="carrito-1a">
+          <img src="../img/star-wars/baby-yoda-1.webp" alt="baby-yoda" />
+          <div class="carrito-1a-info">
+            <h2>BABY YODA BLUEBALL</h2>
+            <h3>STAR WARS</h3>
+            <p id="precio">precio: $1799.99</p>
+          </div>
+        </div>
+        <div class="form-1">
+          <input
+            class="form-1a"
+            type="text"
+            name="quantity"
+            id="quantity"
+            placeholder="0"
+            value="0"
+          />
+          <div class="botones">
+            <button
+              id="btn-incrementar"
+              class=""
+              type="button"
+              onclick="incrementar()"
+            >
+              +
+            </button>
+            <button
+              id="btn-decrementar"
+              class=""
+              type="button"
+              onclick="decrementar()"
+            >
+              -
+            </button>
+          </div>
+        </div>
+        <div id="total" class="precio">$0.00</div>
+        <input class="eliminar" type="button" value="X" />
+      </section>
+
+      <section class="cart-carrito-2">
+        <div class="carrito-2a">
+          <img src="../img/pokemon/pidgeotto-1.webp" alt="pidgeotto" />
+          <div class="carrito-2a-info">
+            <h2>PIDGEOTTO</h2>
+            <h3>POKEMON</h3>
+            <p id="precio-2">precio: $1799.99</p>
+          </div>
+        </div>
+        <div class="form-2">
+          <input
+            class="form-2a"
+            type="text"
+            name="quantity"
+            id="quantity-2"
+            placeholder="0"
+            value="0"
+          />
+          <div id="botones" class="botones">
+            <button
+              id="btn-incrementar-2"
+              class=""
+              type="button"
+              onclick="incrementar()"
+            >
+              +
+            </button>
+            <button
+              id="btn-decrementar-2"
+              class=""
+              type="button"
+              onclick="decrementar()"
+            >
+              -
+            </button>
+          </div>
+        </div>
+        <div id="total-2" class="precio">$0,00</div>
+        <input class="eliminar" type="button" value="X" />
+      </section>
+
+      <section class="secc_resumen">
+        <h2 class="resumen">RESUMEN</h2>
+        <section class="cart-carrito-3">
+          <div id="cantidad-elementos" class="sub-3">
+            CANTIDAD DE ELEMENTOS
+            <p>0</p>
+          </div>
+          <div id="subtotal" class="sub-3">
+            SUBTOTAL
+            <p>$</p>
+          </div>
+          <div id="efectivo" class="sub-3">
+            EFECTIVO
+            <p>$</p>
+          </div>
+          <div id="total-cart-carrito-3" class="sub-3b">
+            TOTAL
+            <p>$</p>
+          </div>
+        </section>
+
+        <button class="pagar">A PAGAR</button>
+      </section>
+    </main>
+
+    <%- include('./footer')%>
+
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="../js/glide.js"></script>
+    <script src="../js/carrito.js"></script>
+  </body>
+</html>

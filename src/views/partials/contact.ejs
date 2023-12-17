@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Funkoshop</title>
+  <link rel="stylesheet" href="./css/contact.css" />
+</head>
+
+<body>
+
+  <%- include('./header1')%>
+
+  <main class="container main__estilo">
+    <form class="contacto__form" id="formulario">
+      <div>
+        <div class="form__grupo2">
+          <div class="form__grupo" id="grupo__apellido">
+            <!-- Apellido -->
+            <label class="form__label" for="lname">Apellido</label>
+            <span class="form__in">
+              <input class="form__input" type="text" name="lname" id="lname" required placeholder="Doe" />
+              <iconify-icon class="icono__form" icon="pajamas:attention" width="20"></iconify-icon>
+            </span>
+            <p class="advertencia__input">
+              El campo apellido no debe contener números, ni caracteres
+              especiales.
+            </p>
+          </div>
+          <div class="form__grupo" id="grupo__nombre">
+            <!-- Nombre -->
+            <label class="form__label" for="fname">Nombre</label>
+            <span class="form__in">
+              <input class="form__input" type="text" name="fname" id="fname" placeholder="Jhon" /><iconify-icon
+                class="icono__form" icon="pajamas:attention" width="20"></iconify-icon>
+            </span>
+            <p class="advertencia__input">
+              El campo nombre no debe contener números, ni caracteres
+              especiales.
+            </p>
+          </div>
+        </div>
+        <div class="form__grupo2">
+          <div class="form__grupo" id="grupo__email">
+            <!-- Email -->
+            <label class="form__label" for="email">Email</label>
+            <span class="form__in">
+              <input class="form__input" type="email" name="email" id="email" required
+                placeholder="Johndoe@correo.com" />
+              <iconify-icon class="icono__form" icon="pajamas:attention" width="20"></iconify-icon>
+            </span>
+            <p class="advertencia__input">
+              Por favor intruce un email válido.
+            </p>
+          </div>
+          <div class="form__grupo" id="grupo__phone">
+            <!-- Telefono -->
+            <label class="form__label" for="phone">Teléfono</label>
+            <span class="form__in">
+              <input class="form__input" type="text" name="phone" id="phone" required placeholder="54111111111" />
+              <iconify-icon class="icono__form" icon="pajamas:attention" width="20"></iconify-icon>
+            </span>
+            <p class="advertencia__input">
+              Por favor intruce un número de teléfono válido, máximo 13
+              dígitos.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="form__coment">
+        <!-- Comentarios -->
+        <label class="form__label" for="comentarios">Mensaje</label>
+        <textarea class="form__comentario" name="comentarios" id="comentarios" cols="30" rows="10" required
+          placeholder="Deja aquí tu Mensaje"></textarea>
+      </div>
+      <div class="error__form" id="error__form">
+        <p class="text__error">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-triangle" width="60"
+            height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 9v4" />
+            <path
+              d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+            <path d="M12 16h.01" />
+          </svg>Error: Por favor confirme los campos y envíelo nuevamente.
+        </p>
+      </div>
+      <div class="form__grupo form__grupo-btn-enviar">
+        <!-- Sumbit -->
+        <button class="contacto__enviar" type="submit">Enviar</button>
+        <p class="mensaje-exito" id="mensaje-exito">
+          Su consulta fue enviada con exito!
+        </p>
+      </div>
+    </form>
+  </main>
+  <%- include('./footer')%>
+
+  <script src="../../js/validacionForm.js"></script>
+</body>
+
+</html>

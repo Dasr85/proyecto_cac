@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <%- include('./header2')%>
+    <main>
+        <section class="formulario-a">
+            <h1 class="titulo">INGRESAR A MI CUENTA </h1>
+            <div class="datos">
+                <p>Email:
+                    <input class="subform-a" type="email" name="email" id="email" placeholder="Johndoe@correo.com">
+                </p>
+                <p>Contraseña:
+                    <input class="subform-b" type="password" name="contraseña" id="contraseña" placeholder=".........">
+                </p>
+            </div>
+            <div class="Ingreso">
+                <input class="boton" type="submit" value="Ingresar">
+                <input type="checkbox" name="item1"><span>Recordarme</span>
+            </div>
+        </section>
+
+    </main>
+    <%- include('./footer')%>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit | Funkoshop</title>
+    <link rel="stylesheet" href="../../css/edit.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
+                <a class="navbar__link" href="/">
+                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop"></a>
+            </picture>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="/shop">VER TIENDA<iconify-icon
+                            icon="ion:chevron-down"></iconify-icon></a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/admin">ADMIN</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/auth/login">SALIR</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main container">
+        <form class="form">
+            <h1 class="create__title">EDITAR ITEM</h1>
+            <div class="form__data1">
+                <span class="cat__lic">
+                    <label for="category">Categoría:</label>
+                    <select name="Categoría" id="category">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Figuras</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </span>
+                <span class="cat__lic">
+                    <label for="license">Licencia:</label>
+                    <select name="Licencia" id="license">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Naruto Shippuden</option>
+                        <option value="2">Pokemon</option>
+                        <option value="3">Harry Potter</option>
+                        <option value="4">Star Wars</option>
+                    </select>
+                </span>
+            </div>
+            <div class="form__data2">
+                <span class="name">
+                    <label for="name">Nombre del producto:</label>
+                    <input type="text" placeholder="Kakashi Hatake Shippuden Saga" id="name">
+                </span>
+                <textarea placeholder="Descripción del producto" id="descripcion" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form__data3">
+                <span>
+                    <label for="serial">SKU:</label>
+                    <input type="text" placeholder="SSK111AB001" id="serial">
+                </span>
+                <span>
+                    <label for="price">Precio:</label>
+                    <input type="text" placeholder="$ 0.000,00" id="price">
+                </span>
+                <span>
+                    <label for="stock">Stock:</label>
+                    <input type="text" placeholder="   0 " id="stock">
+                </span>
+            </div>
+            <div class="form__data4">
+                <span>
+                    <label for="discount">Descuento:</label>
+                    <input type="text" placeholder="   0% " id="discount">
+                </span>
+                <span>
+                    <label for="payment">Cuotas:</label>
+                    <select name="Cuotas" id="payment">
+                        <option selected>Seleccionar</option>
+                        <option value="1">3 Cuotas sin interés</option>
+                        <option value="2">6 Cuotas sin interés</option>
+                        <option value="3">12 Cuotas sin interés</option>
+                    </select>
+                </span>
+            </div>
+            <div class="form__data5">
+                <label for="formFileMultiple" class="form-label">Imágenes</label>
+                <input class="form-control" type="file" id="formFileMultiple" multiple>
+            </div>
+            <div class="form__data6">
+                <input type="submit" id="submit" value="Modificar">
+            
+            </div>
+        </form>
+    </main>
+    <footer class="footer">
+        <nav class="navbar container">
+            <ul class="navbar__item">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/shop">SHOP</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/auth/register">REGISTRARSE</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/auth/login">LOGIN</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/contact">CONTACTO</a>
+                </li>
+            </ul>
+            <picture>
+                <img src="../../img/branding/isotype.svg" alt="Isotipo de la Marca Funkoshop">
+            </picture>
+        </nav>
+        <p class="footer__copy"> All rights reserved 2023 - Funkoshop &copy; </p>
+    </footer>
+</body>
+
+</html>

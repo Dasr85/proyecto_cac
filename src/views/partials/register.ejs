@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Funkoshop</title>
+    <link rel="stylesheet" href="../../css/register.css">
+</head>
+
+<body>
+    <%- include('./header2')%>
+    <main class="container">
+        <section class="formulario-a">
+
+            <h1 class="titulo">CREA TU CUENTA</h1>
+            <h2 class="subtitulo">Completa el formulario para ser parte del mundo de los Funkos</h2>
+
+            <div class="datos">
+                <p>Nombre:
+                    <input class="subform-a" type="text" name="nombre" id="nombre" placeholder="John">
+                </p>
+                <p>Apellido:
+                    <input class="subform-a" type="text" name="apellido" id="apellido" placeholder="Doe">
+                </p>
+                <p>Email:
+                    <input class="subform-b" type="email" name="email" id="email" placeholder="Johndoe@correo.com">
+                </p>
+                <p>Contraseña:
+                    <input class="subform-c" type="password" name="contraseña" id="contraseña" placeholder=".........">
+                </p>
+                <p>Repita Contraseña:
+                    <input class="subform-d" type="password" name="repita contraseña" id="repita contraseña"
+                        placeholder=".........">
+                </p>
+            </div>
+
+            <div class="condiciones">
+                <input class="boton" type="submit" value="Registrar">
+                <input type="checkbox" name="item1"><span>Acepto</span> <a href="#">Términos y Condiciones</a>
+            </div>
+
+        </section>
+
+
+    </main>
+    <%- include('./footer')%>
+
+
+</body>
+
+</html>

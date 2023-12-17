@@ -1,0 +1,346 @@
+
+@import url('https://fonts.googleapis.com/css2? family= Inter:wght@300 & family= Raleway:wght@300 & display=swap');
+
+:root {
+    --primary-solid:#FF3333; 
+    --primary-900: rgb(255, 51, 0.9);
+    --primary-500: rgb(255, 51, 0.5);
+    --primary-300: rgb(255, 51, 0.3);
+
+    --secondary-solid:#1D84B5; 
+    --secondary-900: rgb(29,132,181,0.9);
+    --secondary-500: rgb(29,132,181,0.5);
+    --secondary-300: rgb(29,132,181,0.3);
+
+    --dark-solid:#1F1F1F; 
+    --dark-900: rgb(31,31,31,0.9);
+    --dark-500: rgb(31,31,31,0.5);
+    --dark-300: rgb(31,31,31,0.3);
+
+    --dark-bg-solid: #30343f;
+    --light-bg-solid: #FAFAFF;
+    --light-font-solid: #FFFFFF;
+
+    --base-font: 'Inter', sans-serif;
+    --alternative-font:'Raleway', sans-serif;
+
+    --font-display:4.6em;
+    --font-jumbo:3.8em;
+    --font-xlarge: 3em;
+    --font-large: 2.4em;
+    --font-medium: 1.8em;
+    --font-small: 1.6em;
+    --font-xsmall: 1.4em;
+
+    --spacing-128: 12.8rem;  
+    --spacing-68: 6.8rem;
+    --spacing-36: 3.6rem;
+    --spacing-28: 2.8rem;
+    --spacing-24: 2.4rem;
+    --spacing-20: 2rem;
+    --spacing-16: 1.6rem;
+    --spacing-12: 1.2rem;   
+    --spacing-8: 0.8rem;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family:var(--base-font);
+    font-size: 62.5%;
+    color: var(--dark-solid);
+}
+
+a{
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+header,footer{
+    font-family: var(--alternative-font);
+    color: var(--light-font-solid);
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+p {
+ font-size: 1.8em;
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36);
+}
+.navbar { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo{
+    max-width: 300px;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-20);
+}
+
+.navbar__link {
+    font-size:var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    transition: .3s ease-in-out;
+    position: relative;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.navbar__link:hover {
+background-color: var(--primary-900);
+}
+
+.with-icon{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+.with-submenu:hover .submenu{
+display: block;
+}
+
+.submenu {
+    display: none;
+    width: 300px;
+    position: absolute;
+    background-color: var(--dark-bg-solid);
+    z-index: 3;
+}
+
+.submenu__link {
+ display: block;
+ padding: var(--spacing-8) var(--spacing-16);
+ font-size: var(--font-medium);
+ transition: .3s ease-in-out;
+ -webkit-transition: .3s ease-in-out;
+ -moz-transition: .3s ease-in-out;
+ -ms-transition: .3s ease-in-out;
+ -o-transition: .3s ease-in-out;
+}
+
+.submenu__link:hover {
+    background-color: var(--primary-900);
+}
+
+/*MAIN*/
+
+.main__estilo{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: var(--spacing-36);
+/* background-color: #1F1F1F; */
+}
+
+.contacto__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: content-box;
+    gap: var(--spacing-12);
+    padding: var(--spacing-24);
+    width: 50%;
+    
+}
+
+.form__grupo{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.form__grupo2{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: var(--spacing-24);
+    padding: var(--spacing-24) 0;
+}
+
+.form__in{
+    display: flex;
+    box-sizing: content-box;
+    align-items: center;
+    gap: var(--spacing-8);
+    position: relative;
+}
+
+.icono__form{
+    display: block;
+    position: absolute;
+    right: 10px;
+    z-index: 5;
+    opacity: 0;
+}
+
+
+.form__label{
+    font-size: var(--alternative-font);
+    font-weight: 300;
+    font-size: var(--font-medium);
+
+}
+
+.form__input {
+    padding: 5px;
+    box-sizing: content-box;
+    border: none;
+    border-bottom: solid 2px #FF3333;
+    font-family: var(--alternative-font-family);
+    font-size: var(--font-xsmall);
+    font-weight: 500;
+    text-decoration: none;
+    width: 100%;
+}
+
+.advertencia__input{
+    font-family: var(--alternative-font-family);
+    font-size: var(--font-xsmall);
+    color: var(--dark-solid);
+    font-weight: 100;
+    margin-bottom: 0;
+    margin-top: var(--spacing-8);
+    text-align: center;
+    display: none;
+}
+
+.advertencia__input-activo{
+    display: block;
+}
+
+.form__coment{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12);
+    box-sizing: content-box;
+}
+
+.form__comentario {
+    padding: 5px;
+    box-sizing: content-box;
+    border: solid 2px #FF3333;
+    border-radius: 5px;
+    font-family: var(--alternative-font-family);
+    font-size: var(--font-small);
+    font-weight: 500;
+}
+
+.error__form{
+    display: none;
+}
+
+.text__error{
+    display: flex;
+    gap: var(--spacing-8);    
+    align-items: center;
+    font-family: var(--alternative-font-family);
+    font-size: var(--font-xsmall);
+    color: var(--dark-solid);
+    font-weight: 300;
+    background-color: #ef491f;
+    border-radius: 6px;
+    padding: var(--spacing-8);
+}
+
+.error__form-activo{
+    display: block;
+}
+
+.form__grupo-btn-enviar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto__enviar {
+    text-align: center;
+    width: 75px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.mensaje-exito {
+    font-family: var(--alternative-font-family);
+    font-size: var(--font-large);
+    font-weight: 400;
+    color: var(--dark-solid);
+    text-align: center;
+    display: none;
+}
+
+.mensaje-exito-activo{
+    display: block;
+}
+
+
+/* + ESTILOS PARA LA VALIDACION DEL FORMULARIO CONTACTO */
+
+.form__grupo-correcto .icono__form{
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.form__grupo-incorrecto .icono__form{
+    color: #bb2929;
+    opacity: 1;
+}
+
+/*FOOTER*/
+
+.footer {
+    background-color: var(--dark-bg-solid);
+    padding:var(--spacing-68);
+}
+
+.footer__copy {
+    margin-top:  var(--spacing-36);
+    text-align: center;
+}
