@@ -1,5 +1,6 @@
 const getAdmin = (req, res) => {
-    res.send('getAdmin')
+    // res.send('getAdmin')
+    res.render('admin')
 }
 const getCreate = (req, res) => {
     // res.send('getCreate')

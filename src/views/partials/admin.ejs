@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+    <%- include('./header2')%>
+        <main class="container main__estilo">
+            <div class="search__estilo">
+                <button id="search_icon"><iconify-icon  icon="material-symbols-light:search" width="35"></iconify-icon></button>
+                <input class="search__input" type="text" placeholder="Código, nombre o categoría">
+            </div>
+            <div class="listado__admin">
+                <table>
+                    <thead>
+                        <tr class="table__title">
+                            <th class="title">LISTADO DE PRODUCTOS</th>
+                            <th class="sub-title">AGREGAR
+                                <button class="icon__estilo" onclick="mostrarFormulario()"><iconify-icon id="icon__estilo" icon="ph:plus-fill" width="35" style="color: #f33;"></iconify-icon></button>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+                <table class="table__admin">
+                    <thead>
+                        <tr>
+                            <th class="columnas__estilos">ID</th>
+                            <th class="columnas__estilos">Código</th>
+                            <th class="columnas__estilos">Nombre de Producto</th>
+                            <th class="columnas__estilos">Categoría</th>
+                            <th class="columnas__estilos"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="product_table_body">
+                        <!-- Aquí se mostrarán las filas de la tabla -->
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+        <%- include('./footer')%>
+<script src="../../js/admin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>
