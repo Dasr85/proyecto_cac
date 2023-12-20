@@ -1,10 +1,16 @@
+const { getAll, getOne } = require('../models/productModel.js');
+
+
+
 const getItems = async(req, res) => {
-    // res.send('getItems')
-    res.render('shop')
+    const data = await getAll();
+    res.render(('shop'), { data })
 }
 const getItem = (req, res) => {
-    // res.send(`getHome ${req.params.id}`)
-    res.render('item')
+    const itemId = req.params.id;
+    const item = getOne(itemId);
+    res.render(('item'), { item });
+
 }
 const postItem = (req, res) => {
     res.send('getContact')
