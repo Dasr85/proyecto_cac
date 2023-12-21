@@ -21,7 +21,7 @@
                         <tr class="table__title">
                             <th class="title">LISTADO DE PRODUCTOS</th>
                             <th class="sub-title">AGREGAR
-                                <button class="icon__estilo" onclick="mostrarFormulario()"><iconify-icon id="icon__estilo" icon="ph:plus-fill" width="35" style="color: #f33;"></iconify-icon></button>
+                                <a class="icon__estilo" href="/admin/create"><iconify-icon id="icon__estilo" icon="ph:plus-fill" width="35" style="color: #f33;"></iconify-icon></a>
                             </th>
                         </tr>
                     </thead>
@@ -37,14 +37,27 @@
                         </tr>
                     </thead>
                     <tbody id="product_table_body">
-                        <!-- Aquí se mostrarán las filas de la tabla -->
+                        <% data.forEach( product => { %>
+                            <tr>
+                            <td><%= product.product_id %></td>
+                            <td><%= product.sku %></td>
+                            <td><%= product.product_name %></td>
+                            <td><%= product.licence_name %></td>
+                            <td id="botones">
+                            <a href="/admin/edit/<%= product.product_id %>"><iconify-icon id="icono__borrar" icon="bxs:pencil" width="20" style="color: #1d84b5;"></iconify-icon></a>
+                            <form action="/admin/delete/<%= product.product_id %>?_method=DELETE" method="post" enctype="application/x-www-form-urlencoded">
+                                <button id="icono__borrar" onclick=""><iconify-icon id="icono__borrar" icon="bxs:trash" width="20" style="color: #f33;"></iconify-icon></button>
+                            </form>
+                            </td>
+                            </tr>
+                        <% }) %>
                     </tbody>
                 </table>
             </div>
 
         </main>
         <%- include('./footer')%>
-<script src="../../js/admin1.js"></script>
+<!-- <script src="../../js/admin1.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 </body>
 

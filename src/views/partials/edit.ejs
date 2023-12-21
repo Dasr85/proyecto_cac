@@ -30,59 +30,80 @@
         </nav>
     </header>
     <main class="main container">
-        <form class="form">
+        <form class="form" action="/admin/edit/<%= product.product_id %>?_method=PUT" method="post" enctype="multipart/form-data">
             <h1 class="create__title">EDITAR ITEM</h1>
             <div class="form__data1">
                 <span class="cat__lic">
                     <label for="category">Categoría:</label>
-                    <select name="Categoría" id="category">
-                        <option selected>Seleccionar</option>
-                        <option value="1">Figuras</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select name="category" id="category">
+                        <% if( product.category_id == 1 ) { %>
+                            <option value="1" selected>Funkos</option>
+                            <option value="2">Remeras</option>
+                            <option value="3">Llaveros</option>
+                        <% } %>
+                        <% if( product.category_id == 2 ) { %>
+                            <option value="1">Funkos</option>
+                            <option value="2" selected>Remeras</option>
+                            <option value="3">Llaveros</option>
+                        <% } %>
+                        <% if( product.category_id == 3 ) { %>
+                            <option value="1">Funkos</option>
+                            <option value="2">Remeras</option>
+                            <option value="3" selected>Llaveros</option>
+                        <% } %>
                     </select>
                 </span>
                 <span class="cat__lic">
-                    <label for="license">Licencia:</label>
-                    <select name="Licencia" id="license">
-                        <option selected>Seleccionar</option>
-                        <option value="1">Naruto Shippuden</option>
-                        <option value="2">Pokemon</option>
-                        <option value="3">Harry Potter</option>
-                        <option value="4">Star Wars</option>
+                    <label for="licence">Licencia:</label>
+                    <select name="licence" id="licence">
+                        <% if( product.licence_id == 1 ) { %>
+                            <option value="1" selected>Pokemon</option>
+                            <option value="3">Harry Potter</option>
+                            <option value="2">Star Wars</option>
+                        <% } %>
+                        <% if( product.licence_id == 2 ) { %>
+                            <option value="1">Pokemon</option>
+                            <option value="3">Harry Potter</option>
+                            <option value="2"selected>Star Wars</option>
+                        <% } %>
+                        <% if( product.licence_id == 3 ) { %>
+                            <option value="1">Pokemon</option>
+                            <option value="3" selected>Harry Potter</option>
+                            <option value="2">Star Wars</option>
+                        <% } %>
                     </select>
                 </span>
             </div>
             <div class="form__data2">
                 <span class="name">
                     <label for="name">Nombre del producto:</label>
-                    <input type="text" placeholder="Kakashi Hatake Shippuden Saga" id="name">
+                    <input type="text" name="name" value="<%= product.product_name %>" id="name">
                 </span>
-                <textarea placeholder="Descripción del producto" id="descripcion" cols="30" rows="10"></textarea>
+                <textarea value="" name="description" id="descripcion" cols="30" rows="10"><%= product.product_description %></textarea>
             </div>
             <div class="form__data3">
                 <span>
                     <label for="serial">SKU:</label>
-                    <input type="text" placeholder="SSK111AB001" id="serial">
+                    <input type="text" name="sku" value="<%= product.sku %>" id="serial">
                 </span>
                 <span>
                     <label for="price">Precio:</label>
-                    <input type="text" placeholder="$ 0.000,00" id="price">
+                    <input type="text" name="price" value="$ <%= product.price %>" id="price">
                 </span>
                 <span>
                     <label for="stock">Stock:</label>
-                    <input type="text" placeholder="   0 " id="stock">
+                    <input type="text" name="stock" value="<%= product.stock %>" id="stock">
                 </span>
             </div>
             <div class="form__data4">
                 <span>
                     <label for="discount">Descuento:</label>
-                    <input type="text" placeholder="   0% " id="discount">
+                    <input type="text" name="discount" value="<%= product.discount %> %" id="discount">
                 </span>
                 <span>
                     <label for="payment">Cuotas:</label>
                     <select name="Cuotas" id="payment">
-                        <option selected>Seleccionar</option>
+                        <option selected>Sin Coutas</option>
                         <option value="1">3 Cuotas sin interés</option>
                         <option value="2">6 Cuotas sin interés</option>
                         <option value="3">12 Cuotas sin interés</option>
@@ -92,6 +113,16 @@
             <div class="form__data5">
                 <label for="formFileMultiple" class="form-label">Imágenes</label>
                 <input class="form-control" type="file" id="formFileMultiple" multiple>
+            </div>
+            <div class="form__data5">
+                <div class="edit__img">
+                    <img src="../../img/<%= product.img_front %>" alt="">
+                    <p class="edit__img-side">Frente</p>
+                </div>
+                <div class="edit__img">
+                    <img src="../../img/<%= product.img_back %>" alt="">
+                    <p class="edit__img-side">Dorso</p>
+                </div>
             </div>
             <div class="form__data6">
                 <input type="submit" id="submit" value="Modificar">

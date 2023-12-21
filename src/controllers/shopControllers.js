@@ -6,9 +6,9 @@ const getItems = async(req, res) => {
     const data = await getAll();
     res.render(('shop'), { data })
 }
-const getItem = (req, res) => {
+const getItem = async(req, res) => {
     const itemId = req.params.id;
-    const item = getOne(itemId);
+    const [item] = await getOne(itemId);
     res.render(('item'), { item });
 
 }

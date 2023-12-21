@@ -53,15 +53,14 @@
     <main class="main-container">
         <section class="collection container">
             <picture class="collection__cover">
-                <img src="../../img/star-wars/baby-yoda-1.webp"
+                <img src="../../img/<%= item.img_front %>"
                     alt="Figura collecionable Funko de Grogu de la serie The Mandolorian">
             </picture>
             <article class="collection__content">
-                <p class="item__licence">STAR WARS</p>
-                <h3 class="collection__title">BABY YODA BLUEBALL </h3>
-                <p class="collection__text">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición
-                    limitada.</p>
-                <p class="item__price">$ 1799,99</p>
+                <p class="item__licence"><%= item.licence_name %></p>
+                <h3 class="collection__title"><%= item.product_name %> </h3>
+                <p class="collection__text"><%= item.product_description %></p>
+                <p class="item__price">$<%= item.price %></p>
                 <div class="item__cart">
                     <span class="item__cart__span">
                         <input class="item__imput" type="text" name="quantity" id="quantity" placeholder="0">
@@ -72,7 +71,7 @@
                     </span>
                     <button class="card-item__add" type="submit">Agegar al Carrito</button>
                 </div>
-                <p class="card-item__promo"> <a href="/shop">Ver métodos de pago- 3 CUOTAS SIN INTERÉS</a></p>
+                <p class="card-item__promo"> <a href="/shop">Ver métodos de pago</a>- <%= item.dues %> CUOTAS SIN INTERÉS</p>
             </article>
         </section>
 
@@ -89,6 +88,7 @@
                                         alt="Figura coleccionable Funko de un StormTrooper">
                                     <img class="card-item__img--back" src="../../img/star-wars/trooper-box.webp"
                                         alt="Figura coleccionable Funko de un StormTrooper en caja">
+                                        
                                 </picture>
                                 <div class="card-item__content">
                                     <p class="card-item__licence">STAR WARS</p>
